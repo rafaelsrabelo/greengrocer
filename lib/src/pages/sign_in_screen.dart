@@ -7,12 +7,52 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.blue,
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              color: Colors.green,
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text.rich(
+                  TextSpan(
+                    style: TextStyle(
+                      fontSize: 40,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Dindin',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold
+                        )
+                      ),
+                      TextSpan(
+                        text: 'da',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold
+
+                        )
+                      ),
+                      TextSpan(
+                        text: 'leia',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold
+
+                        )
+                      )
+                    ]
+                  )
+                ),
+                const Text('Delivery',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+                )
+              ],
             ),
           ),
           Container(
@@ -38,19 +78,20 @@ class SignInScreen extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18))),
                       onPressed: () {},
                       child: const Text(
                         'Entrar',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       )),
                 ),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Esqueceu a senha?',
                         style: TextStyle(color: Colors.red),
                       )),
@@ -87,12 +128,12 @@ class SignInScreen extends StatelessWidget {
                       ),
                       side: BorderSide(
                         width: 2,
-                        color: Colors.green,
+                        color: Colors.blue,
                       ),
                     ),
                     onPressed: () {}, 
                     child: const Text('Criar conta',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 18, color: Colors.blue),
                     )),
                 ),
               ],
