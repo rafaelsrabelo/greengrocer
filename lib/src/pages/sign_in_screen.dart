@@ -12,11 +12,10 @@ class SignInScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              color: Colors.red,
+              color: Colors.green,
             ),
           ),
-          Expanded(
-              child: Container(
+          Container(
             padding: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
             decoration: const BoxDecoration(
                 color: Colors.white,
@@ -38,27 +37,67 @@ class SignInScreen extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18)
-                      )
-                    ),
-                    onPressed: () {},
-                    child: const Text('Entrar', style: TextStyle(fontSize: 18),)),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18))),
+                      onPressed: () {},
+                      child: const Text(
+                        'Entrar',
+                        style: TextStyle(fontSize: 18),
+                      )),
                 ),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {}, 
-                    child: Text('Esqueceu a senha?',
-                    style: TextStyle(
-                      color: Colors.red
+                      onPressed: () {},
+                      child: Text(
+                        'Esqueceu a senha?',
+                        style: TextStyle(color: Colors.red),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey[200],
+                          thickness: 2,
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text('ou'),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey[200],
+                          thickness: 2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 50,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      side: BorderSide(
+                        width: 2,
+                        color: Colors.green,
+                      ),
                     ),
+                    onPressed: () {}, 
+                    child: const Text('Criar conta',
+                      style: TextStyle(fontSize: 18),
                     )),
-                )
+                ),
               ],
             ),
-          ))
+          ),
         ],
       ),
     );
