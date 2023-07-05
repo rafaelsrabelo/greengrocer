@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/pages/sign_up_screen.dart';
 import 'package:greengrocer/src/widgets/custom_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -138,7 +139,14 @@ class SignInScreen extends StatelessWidget {
                             color: Colors.blue,
                           ),
                         ),
-                        onPressed: () {}, 
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (c) {
+                                return SignUpScreen();
+                              } )
+                          );
+                        }, 
                         child: const Text('Criar conta',
                           style: TextStyle(fontSize: 18, color: Colors.blue),
                         )),
